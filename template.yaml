@@ -53,7 +53,7 @@ spec:
           title: Image Registry
           type: string
           enum:
-            - Openshift
+            - OpenShift
             - Quay
       dependencies:
         image_registry:
@@ -61,7 +61,7 @@ spec:
             - properties:
                 image_registry:
                   enum:
-                    - Openshift
+                    - OpenShift
                 image_host:
                   title: Image Host
                   type: string
