@@ -25,7 +25,7 @@ metadata:
 spec:
   type: service
   lifecycle: development
-  owner: ${{values.owner | dump}}
+  owner: user:default/${{values.owner | dump}}
   providesApis:
     - ${{values.component_id | dump}}
 ---
@@ -39,6 +39,6 @@ metadata:
 spec:
   type: openapi
   lifecycle: development
-  owner: ${{values.owner | dump}}
+  owner: user:default/${{values.owner | dump}}
   definition:
     $text: ./openapi.yaml
