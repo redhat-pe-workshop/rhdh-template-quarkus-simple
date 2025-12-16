@@ -176,8 +176,9 @@ spec:
         repoUrl: "{{ '${{ parameters.repo.host }}' }}?owner={{ '${{ user.entity.metadata.name }}' }}&repo={{ '${{parameters.component_id}}' }}-gitops"
         repoVisibility: public
         defaultBranch: main
-        title: gitops resources for {{ '${{ parameters.component_id }}' }}
-        description: gitops resources for {{ '${{ parameters.component_id }}' }}
+        # Causing error with RHDH 1.8 - not valid inputs to the plugin
+        # title: gitops resources for {{ '${{ parameters.component_id }}' }}
+        # description: gitops resources for {{ '${{ parameters.component_id }}' }}
         sourcePath: {{ './${{ user.entity.metadata.name }}-${{parameters.component_id}}-gitops' }}
 
     - id: create-argocd-resources
